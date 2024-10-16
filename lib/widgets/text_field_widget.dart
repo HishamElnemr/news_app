@@ -32,6 +32,7 @@ class TextFieldWidget extends StatelessWidget {
         ),
         TextFormField(
           onChanged: onChanged,
+          obscureText: text == 'Password' ? true : false,
           validator: validator ?? (data) {
             if (data!.isEmpty) {
               return 'This field is required';
